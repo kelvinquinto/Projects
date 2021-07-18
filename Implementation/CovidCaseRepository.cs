@@ -45,5 +45,10 @@ namespace covidAPI.Implementation
             _context.CovidCases.RemoveRange(records);
             await _context.SaveChangesAsync();
         }
+
+        public bool Test()
+        {
+            return true;
+        }
     }
 }
