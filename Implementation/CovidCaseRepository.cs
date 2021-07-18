@@ -9,8 +9,6 @@ namespace covidAPI.Implementation
 {
     public class CovidCaseRepository : ICovidCaseRepository
     {
-
-//TEST
         private readonly IDataContext _context;
         public CovidCaseRepository(IDataContext context)
         {
@@ -44,11 +42,6 @@ namespace covidAPI.Implementation
 
             _context.CovidCases.RemoveRange(records);
             await _context.SaveChangesAsync();
-        }
-
-        public bool Test()
-        {
-            return true;
         }
     }
 }
