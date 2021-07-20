@@ -3,13 +3,12 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 using covidAPI.Models;
+using covidAPI.Repositories;
 
 namespace covidAPI.Interface
 {
-    public interface ICovidCaseRepository
+    public interface ICovidCaseRepository : IRepository<CovidCase>
     {
         Task<object> GetCovidCases(DateTime strObservationDate, int intMaxResults);
-        Task DeleteAll();
-        Task AddBatch(List<CovidCase> covidCases);
     }
 }

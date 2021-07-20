@@ -51,7 +51,8 @@ namespace covidAPI
                     csvReader.Context.RegisterClassMap<CovidCaseMap>();
                     var records = csvReader.GetRecords<CovidCase>().ToList();
 
-                    _covidCaseRepository.AddBatch(records);
+                    _covidCaseRepository.AddRange(records);
+                    _covidCaseRepository.Save();
                 }
             }
         }

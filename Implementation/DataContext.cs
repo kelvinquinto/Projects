@@ -8,7 +8,6 @@ namespace covidAPI.Implementation
     {
         public DataContext(DbContextOptions<DataContext> options): base(options)
         {
-            
         }
 
         public DbSet<CovidCase> CovidCases { get; set; }
